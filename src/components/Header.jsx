@@ -36,12 +36,7 @@ function Header() {
               sx={{ cursor: "pointer" }}
               onClick={() => navigate("/")}
             >
-              <Box
-                component="img"
-                src="/logo.jpeg"
-                alt="CryptoMa Logo"
-                sx={{ width: 220, height: 60 }}
-              />
+              {/* Logo usunięte */}
               <Typography
                 variant="h6"
                 sx={{
@@ -50,7 +45,7 @@ function Header() {
                   fontWeight: "bold",
                 }}
               >
-                {/* CryptoMa */}
+                {/* Możesz tutaj wpisać nazwę strony lub zostawić puste */}
               </Typography>
             </Box>
 
