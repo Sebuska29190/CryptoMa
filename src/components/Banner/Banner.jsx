@@ -19,12 +19,7 @@ export default function Banner() {
     <BannerWrapper>
       <Container>
         <Box display="flex" flexDirection="column" alignItems="center">
-          <Box
-            component="img"
-            src="/logo.jpeg"
-            alt="CryptoMa Logo"
-            sx={{ width: 390, height: 180, marginBottom: 1 }}
-          />
+          {/* Logo zostało usunięte */}
           <Typography
             variant="h2"
             sx={{
