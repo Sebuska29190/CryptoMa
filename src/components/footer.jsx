@@ -23,12 +23,7 @@ const Footer = () => {
         gap: 1.5,
       }}
     >
-      <Box
-        component="img"
-        src="/logo.jpeg"
-        alt="Logo"
-        sx={{ width: 199, height: 80 }}
-      />
+      {/* Logo zostało usunięte */}
 
       <Box display="flex" gap={2}>
         <a
