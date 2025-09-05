@@ -45,7 +45,7 @@ function Header() {
                   fontWeight: "bold",
                 }}
               >
-                {/* Możesz tutaj wpisać nazwę strony lub zostawić puste */}
+                CryptoMa
               </Typography>
             </Box>
 
