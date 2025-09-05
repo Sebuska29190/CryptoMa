@@ -1,14 +1,27 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
+// Tworzymy kontekst
 const Crypto = createContext();
 
+// Provider dla aplikacji
 const CryptoContext = ({ children }) => {
   const [currency, setCurrency] = useState("USD");
   const [symbol, setSymbol] = useState("$");
 
   useEffect(() => {
-    if (currency === "USD") setSymbol("$");
-    else if (currency === "PLN") setSymbol("ZLOTYCH");
+    switch (currency) {
+      case "USD":
+        setSymbol("$");
+        break;
+      case "EUR":
+        setSymbol("€");
+        break;
+      case "PLN":
+        setSymbol("zł");
+        break;
+      default:
+        setSymbol("$");
+    }
   }, [currency]);
 
   return (
@@ -20,6 +33,5 @@ const CryptoContext = ({ children }) => {
 
 export default CryptoContext;
 
-export const CryptoState = () => {
-  return useContext(Crypto);
-};
+// Hook do używania kontekstu w komponentach
+export const CryptoState = () => useContext(Crypto);
