@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import parse from "html-react-parser"; 
 import CoinInfo from "../components/CoinInfo";
 import { SingleCoin } from "../config/api";
-import { numberWithCommas } from "../components/CoinsTable";
+// ❌ usunięte numberWithCommas
 import { CryptoState } from "../CryptoContext";
 
 const Container = styled("div")({
@@ -36,6 +36,7 @@ export default function CoinPage() {
     setCoin(data);
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchCoin();
   }, []);
@@ -45,7 +46,12 @@ export default function CoinPage() {
   return (
     <Container>
       <Sidebar>
-        <img src={coin.image.large} alt={coin.name} height="200" style={{ marginBottom: 20 }} />
+        <img 
+          src={coin.image.large} 
+          alt={coin.name} 
+          height="200" 
+          style={{ marginBottom: 20 }} 
+        />
         <Typography variant="h3" sx={{ fontWeight: "bold" }}>
           {coin.name}
         </Typography>
