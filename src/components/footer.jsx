@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { GitHub, LinkedIn } from "@mui/icons-material";
+import { GitHub, Twitter } from "@mui/icons-material"; // używamy Twitter jako X
 
 const Footer = () => {
   const currentDate = new Date().toLocaleDateString("en-US", {
@@ -23,22 +23,22 @@ const Footer = () => {
         gap: 1.5,
       }}
     >
-      {/* Logo zostało usunięte */}
+      {/* Logo usunięte */}
 
       <Box display="flex" gap={2}>
         <a
-          href="https://github.com/HashimAyamon"
+          href="https://github.com/Sebuska29190"
           target="_blank"
           rel="noopener noreferrer"
         >
           <GitHub sx={{ color: "gold", fontSize: 30 }} />
         </a>
         <a
-          href="https://www.linkedin.com/in/hashim-a-139a00269/"
+          href="https://www.x.com/cryptowithbuska"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <LinkedIn sx={{ color: "gold", fontSize: 30 }} />
+          <Twitter sx={{ color: "gold", fontSize: 30 }} />
         </a>
       </Box>
 
